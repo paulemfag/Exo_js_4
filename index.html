@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+  <title>Java</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <form>
+    <label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname"/>
+    <label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname"/>
+    <label for="city">Ville : </label><input type="text" name="city" id="city"/>
+    <button  name="submit" id="submit">Valider</button>
+  </form>
+  <script>
+    var submitButton = document.getElementById('submit');
+    submitButton.onclick = function()
+ {
+   var lastname = document.getElementById("lastname").value;
+   var firstname = document.getElementById("firstname").value;
+   var city = document.getElementById("city").value;
+   if(lastname && firstname && city != '') {
+     alert('\n Nom : ' + lastname + '\n Prénom : ' + firstname + '\n Ville : ' + city);
+   }
+   else {
+     alert('Merci de remplir tous les champs');
+   }
+ };
+</script>
+</body>
+</html>
